@@ -1,0 +1,318 @@
+$red: #7c0a02;
+$dark-red: #5a0e09;
+$lamba-hover: #ffaf42;
+$sari: #fe6e00;
+$sari-hover: #ffa703;
+$background:#22a7f0;
+$glass: #537eeb6c;
+$grey: rgb(39, 37, 37);
+$night: darken(#6c7a89 , 15);
+$sun: #FDB813;
+$sand: #edd3a0;
+$cloud1: #fffefd;
+$cloud2: #c7cacc;
+@keyframes rotate1 {
+    from {transform:rotate(80deg) }
+    to {transform:rotate(-50deg) }
+}
+@keyframes rotate2 {
+    from {transform:rotate(8deg) }
+    to {transform:rotate(100deg) }
+}
+@keyframes onOff {
+    from {background-color: $sari-hover;
+        box-shadow: 1px 0px 10px 3px lighten($sari-hover, 0.68);}
+    to {background: $sari;
+        box-shadow: none;}
+}
+body{
+  background-color: white;
+}
+.box{
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  margin: 20px;
+  top: 0px;
+  border-radius: 0px;//30
+  background-color: $background;
+  z-index: 0;
+  transition: 2s background-color;
+  .sand{
+    height: 122px;
+    bottom: 0px;
+    background-color: $sand;
+    border-radius:0 0 0px 0px;
+    transition: 2s background-color;
+  }
+  .cloud{
+      position: relative;
+      display: inline-block;
+      width: 280px;
+      height: 50px;
+      top: 50px;
+      left: -300px;
+      border-radius: 50px;
+      background-color: $cloud1;
+      z-index: 2;
+      transition: 2s left , 2s background-color ;
+      .ciycle1{
+        position: relative;
+        height:50px;
+        width: 100px;
+        border-radius: 150px 150px 0 0;
+        background: inherit;
+        top: -50px;
+        left: 30px;
+      }
+      .ciycle2{
+        position: relative;
+        height:75px;
+        width: 150px;
+        border-radius: 150px 150px 0 0;
+        background: inherit;
+        top: -125px;
+        left: 110px;
+
+      }
+  }
+  .sun{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    top:10px;
+    left: 0px;
+    background-color: $sun;
+    border-radius: 50%;
+    z-index: 0;
+    transition: 1.5s left ;
+  }
+  .car{
+      position: relative;
+      top: 80px;
+      z-index: 2;
+    .govde{
+       position: relative;
+       display: inline-block;//****************
+       width: 300px;
+       height: 90px;
+       top: -84px;
+       left: 105px;
+       border-radius: 28px 28px 0px 0px;
+       background: $dark-red ;
+       z-index: 2;
+       .on{
+         position: relative;
+         width: 300px;
+         height: 60px;
+         top: 30px;
+         left: 0px;
+         background: $red;
+         z-index: 4;
+         .lamba{
+             position: relative;
+             display: inline-block;
+             width: 30px;
+             height: 30px;
+             top: 10px;
+             left: 21px;
+             border:3px solid #575353;
+             border-radius: 50%;
+             border-bottom: none;
+             border-left: none;
+             border-right: none;
+             background-color: white;
+             z-index: 0;
+             transition: .2s  background-color;
+         }
+         .sari{
+             background: $sari;
+             width: 8px;
+             height: 8px;
+             margin: 10px;
+             top: 3px;
+         }
+         .izgara{
+             position: relative;
+             display: inline-block;
+             width: 4px;
+             height: 30px;
+             top: 8px;
+             left: 20px;
+             background: black;
+             z-index: 0;
+             margin-left: 5px;
+         }
+       }
+     }    
+     .cam{
+       position: relative;
+       display: inline-block;
+
+       width: 230px;
+       height: 80px;
+       top: 0px;
+       left: 130px;
+       border-radius: 40px 40px 0px 0px;
+       border: 10px solid $red;
+       background: $glass;
+       z-index: 1;
+       .silecek{
+         position: relative;
+         width: 2px;
+         height: 140px;
+         top: 20px;
+         left: 124px;
+         background-color: black;
+         transform:rotate(80deg)  ;
+         .silecek2{
+           transform:rotate(8deg);
+           height: 80px;
+           left: 1px; 
+           top: -38px
+         }
+       }
+       .circle{
+           position: relative;
+           width: 0px;
+           height: 0px;
+           top: -53px;
+           left: 121px;
+           border:  3px solid black;
+           border-radius: 50%;
+       }
+     }
+     .tampon{
+       position: relative;
+       width: 320px;
+       height: 30px;
+       top: 25px;
+       left: -10px;
+       border-radius: 10px 10px 0px 0px;
+       background: $grey;
+       z-index: 4;
+       .plaka{
+         position: relative;
+         width: 80px;
+         height: 18px;
+         top: 4px;
+         left: 120px;
+         background: white;
+         border: 2px solid black;
+         z-index: 0;
+         transition: .6s background-color;
+       }
+     }
+     .lastik{
+       position: relative;
+       display: inline-block;
+       margin-top: 0px;
+       width: 50px;
+       height: 50px;
+       top: 20px;
+       left: 10px;
+       border-radius: 4px;
+       background: black;
+       z-index: -1; 
+     }
+     .r{
+       left: 185px;
+     }
+     .direksiyon{
+       position: relative;
+       display: inline-block;
+       width: 60px;
+       height: 60px;
+       top: 40px;
+       left: 40px;
+       background-color: transparent;
+       border: 5px solid black;
+       border-radius: 50%;
+     }
+     .koltuklar{
+         position: relative;
+         display: inline-block;
+        .koltuk{
+            position: relative;
+            display: inline-block;
+            width: 70px;
+            height: 80px;
+            top: -40px;
+            left: 80px;
+            margin-left: 70px;
+            border-radius: 10px;
+            background: rgb(87, 87, 87);
+            z-index: -4;
+            .kafa{
+              position: relative;
+              width: 30px;
+              height: 30px;
+              top: -31px;
+              left: 20px;
+              border-radius: 10px;
+              background: rgb(87, 87, 87);
+              z-index: -4;
+              .cubuk{
+                position: relative;
+                display: inline-block;
+                width: 2px;
+                height: 2px;
+                top: 17px;
+                left: 3.5px;
+                background: rgb(53, 53, 53);
+                margin-left: 5px;
+              }
+            }
+          }
+     }
+     
+     .r2{
+       left: 285px;
+     }
+    }
+  &:hover{
+      background-color: $night;
+      .sun{
+        left: 220px;
+      }
+      .sand{
+        background-color:grayscale($sand);
+      }
+      .cloud{
+          background-color: $cloud2;
+          left: 115px;
+      }
+      .car .on .lamba{
+        background-color: $lamba-hover;
+        box-shadow: 1px 0px 50px 15px lighten($lamba-hover , 0.9);
+      }
+      .govde .tampon .plaka{
+          background-color: darken(white,18);
+      }
+      .sari{
+        background-color: $sari-hover;
+        box-shadow: 1px 0px 10px 3px lighten($sari-hover, 1);
+        animation-name: onOff;
+        animation-duration: .6s;
+        animation-delay: .4s;
+        animation-iteration-count: infinite;
+        
+      }
+      .silecek{
+        animation-name: rotate1;
+        animation-duration: 2s;
+        animation-delay: .4s;
+        animation-iteration-count: infinite;
+      }
+      .silecek2{
+        animation-name: rotate2;
+        animation-duration: 2s;  
+        animation-delay: .4s;
+      }
+  }
+}
+
+
+
+
