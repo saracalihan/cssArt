@@ -38,6 +38,7 @@ body {
   background-color: #22a7f0;
   z-index: 0;
   transition: 2s background-color;
+  overflow: hidden;
 }
 .box .sand {
   height: 122px;

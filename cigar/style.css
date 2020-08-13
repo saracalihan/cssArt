@@ -1,0 +1,237 @@
+@keyframes smoking {
+  0% {
+    transform: rotate(15deg);
+    top: 0px;
+    right: 30px;
+  }
+  25% {
+    transform: rotate(0deg);
+    top: -30px;
+    right: 30px;
+  }
+  50% {
+    transform: rotate(0deg);
+    top: -30px;
+    right: 30px;
+  }
+  100% {
+    transform: rotate(90deg);
+    top: -30px;
+    right: 350px;
+  }
+}
+@keyframes smoking2 {
+  from {
+    right: 500px;
+  }
+  to {
+    right: -800px;
+  }
+}
+@keyframes smoking3 {
+  0% {
+    right: 0px;
+    width: 0px;
+  }
+  25% {
+    right: 3px;
+    width: 3px;
+  }
+  50% {
+    right: 5px;
+    width: 3px;
+  }
+  100% {
+    right: 0px;
+    width: 0px;
+  }
+}
+.box {
+  position: absolute;
+  display: flex;
+  margin: 30px;
+  width: 600px;
+  height: 600px;
+  margin-top: 20px;
+  background-color: #DE9521;
+  border: 0px solid #8B2C2A;
+  border-radius: 15px;
+  perspective: 300px;
+  overflow: hidden;
+}
+.box:hover .cigar .ash .fire {
+  animation-name: smoking3;
+  animation-duration: 4s;
+  animation-delay: 1.2s;
+  animation-fill-mode: both;
+}
+.box:hover .cigar {
+  animation-name: smoking;
+  animation-duration: 6s;
+  animation-fill-mode: both;
+}
+.box:hover .smoke {
+  animation-name: smoking2;
+  animation-duration: 2s;
+  animation-delay: 5s;
+  animation-fill-mode: both;
+}
+.box:hover .smokeBox {
+  right: 0px;
+}
+.box .smoke {
+  position: relative;
+  width: 0px;
+  height: 100px;
+  right: 500px;
+  top: 250px;
+  box-shadow: 0px 0px 200px 80px #CBC7B7;
+}
+.box .cigar {
+  position: relative;
+  width: 520px;
+  height: 80px;
+  background-color: #52372C;
+  background: linear-gradient(0deg, #31211a 0%, #734d3e 73%, #52372C 100%);
+  margin: auto;
+  right: 30px;
+  top: 0px;
+  border-radius: 50px 15px 15px 50px;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg) rotate(15deg);
+  overflow: hidden;
+}
+.box .cigar .line {
+  position: absolute;
+  width: 120px;
+  height: 80px;
+  left: 300px;
+  border: 1px solid #37251e;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 100% 0 0 0;
+}
+.box .cigar .l2 {
+  left: 70px;
+}
+.box .cigar .ring {
+  position: relative;
+  left: 120px;
+  width: 60px;
+  bottom: 40px;
+  height: 130px;
+  background-color: #8B2C2A;
+  border: 5px solid #AF8D56;
+  border-top: none;
+  border-bottom: none;
+  transform: rotateX(30deg) rotateY(0deg) rotate(0deg);
+  background: linear-gradient(0deg, #3d1312 0%, #8B2C2A 20%, #8B2C2A 60%);
+}
+.box .cigar .ring .ring-circle {
+  position: relative;
+  width: 90px;
+  height: 60px;
+  top: 5px;
+  right: 20px;
+  background-color: grey;
+  border: 5px solid #AF8D56;
+  border-radius: 50%;
+  background: linear-gradient(0deg, #81241e 0%, #d03e35 80%, #AA2F28 100%);
+}
+.box .cigar .ash {
+  position: relative;
+  width: 40px;
+  height: 80px;
+  left: 481px;
+  right: 0px;
+  top: -130px;
+  background-color: grey;
+  border-radius: 0 15px 15px 0;
+  border-left: 1px solid black;
+}
+.box .cigar .ash .fire {
+  position: relative;
+  width: 0px;
+  height: 80px;
+  background-color: #c2261f;
+  right: 0px;
+  transition: 2s right, 2s width;
+  transition-timing-function: ease-in;
+}
+.box .smokeBox {
+  position: absolute;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  right: 600px;
+  background-color: #CBC7B7;
+  transition: 3s right;
+  transition-timing-function: ease-out;
+  transition-delay: 5s;
+}
+.box .smokeBox .sign {
+  position: relative;
+  margin: auto;
+  width: 460px;
+  height: 460px;
+  background-color: white;
+  border: 40px solid #F0442B;
+  border-radius: 50%;
+}
+.box .smokeBox .sign .signsSmoke {
+  position: relative;
+  width: 360px;
+  height: 40px;
+  top: 230px;
+  margin: auto;
+  transform: rotate(0deg);
+  background-color: black;
+}
+.box .smokeBox .sign .signsSmoke .white {
+  position: relative;
+  width: 10px;
+  height: inherit;
+  left: 300px;
+  background-color: white;
+}
+.box .smokeBox .sign .signsSmoke .w2 {
+  left: 330px;
+  top: -40px;
+}
+.box .smokeBox .sign .signsSmoke .smoke2 {
+  position: relative;
+  width: 40px;
+  height: 60px;
+  left: 310px;
+  bottom: 160px;
+  border: 10px solid black;
+  border-bottom: none;
+  border-left: none;
+  border-radius: 0 80% 0 0;
+}
+.box .smokeBox .sign .signsSmoke .s2 {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  left: 270px;
+  bottom: 270px;
+  border: 10px solid black;
+  border-top: none;
+  border-right: none;
+  border-radius: 0 0 0 80%;
+}
+.box .smokeBox .sign .signsSmoke .s3 {
+  position: relative;
+  right: 50px;
+  bottom: 120px;
+}
+.box .smokeBox .sign .cross {
+  position: absolute;
+  width: inherit;
+  height: 40px;
+  top: 210px;
+  transform: rotate(45deg);
+  background-color: #F0442B;
+}
+
+/*# sourceMappingURL=style.css.map */
