@@ -15,4 +15,4 @@ When you hover your cursor on the cigar, its burn and smoking.
 ---
 
 ## License
-[MIT License](LICENSE)
+[GNU GENERAL PUBLIC LICENSE Version 3](LICENSE)
